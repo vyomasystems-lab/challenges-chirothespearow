@@ -97,3 +97,5 @@ The binary value of *inp12* is incorrectly specified as 01101 , which is actuall
 Updating the design and re-running the test makes the test pass.
 
 ![image](https://user-images.githubusercontent.com/44639543/180617469-3946cd01-b3f7-47b6-a5ac-fe8c0958aa62.png)
+
+The updated design is checked in as mux_fix.v
