@@ -98,7 +98,7 @@ Updating the design and re-running the test makes the test pass.
 
 ![image](https://user-images.githubusercontent.com/44639543/180617469-3946cd01-b3f7-47b6-a5ac-fe8c0958aa62.png)
 
-The updated design is checked in as mux_fix.v
+The updated design is checked in as mux_corrected.v
 ## Verification Strategy
 
 # Level 1 - Sequence Detector (1011 with Overlap) Design Verification
@@ -169,5 +169,5 @@ Updating the design and re-running the test makes the test pass.
 
 ![image](https://user-images.githubusercontent.com/44639543/180658245-28dc4b56-75c0-4e08-89ae-6119ed3ea9ae.png)
 
-The updated design is checked in as seq_detect_1011_fixed.v
+The updated design is checked in as seq_detect_1011_corrected.v
 ## Verification Strategy
