@@ -14,7 +14,7 @@ module vedic8x8(input [7:0] a,b, output [15:0] prod);
 	ripple_adder_12bit RA1({4'b0,mult1},{mult3,4'b0},1'b0,sum1,carry1);
 	ripple_adder_12bit RA2({4'b0,sum0},sum1,1'b0,sum2,carry2);
 
-	assign prod = {sum2,mult0[3:0]};
+	assign prod = {sum1,mult0[3:0]};
 
 endmodule
 module vedic4x4(input [3:0] a,b, output [7:0] prod);
