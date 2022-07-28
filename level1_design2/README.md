@@ -68,3 +68,4 @@ Updating the design and re-running the test makes the test pass.
 
 The updated design is checked in as seq_detect_1011_corrected.v
 ## Verification Strategy
+Two test modules were created, one piped in a predefined stream of bits to the input while the other gave random stream of bits. The output of the sequence detector was simulated in python by implementing a stack and comparing it with the given sequence (1011). The assert statement was used to compare the python-generated output to that of the DUT, and an error was thrown in case of a mismatch. This error was investigated and the source code was thoroughly combed through to find the bug and fix it.
