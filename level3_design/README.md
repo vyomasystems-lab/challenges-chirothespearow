@@ -64,3 +64,4 @@ Updating the design and re-running the test makes the test pass.
 
 The updated design is checked in as vedic8x8_corrected.v
 ## Verification Strategy
+Each of the three *src* inputs were given random 32-bit values, while the *instr* input was manually given inputs according to each opcode. The assert statement was used to compare the python-generated output to that of the DUT, and an error was thrown in case of a mismatch. 
