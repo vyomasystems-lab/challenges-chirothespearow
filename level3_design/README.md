@@ -44,8 +44,8 @@ Test 1
 
 Test 2
 - Test Inputs: a = random.randint(0, 15), b = random.randint(0, 15)
-- Expected Output: out = 0 (binary--> 00)
-- Observed Output in the DUT dut.sel = 01
+- Expected Output: out = 24 
+- Observed Output in the DUT dut.sel = 8
 
 Output mismatches for the above inputs proving that there is a design bug
 
@@ -64,4 +64,4 @@ Updating the design and re-running the test makes the test pass.
 
 The updated design is checked in as vedic8x8_corrected.v
 ## Verification Strategy
-Each of the three *src* inputs were given random 32-bit values, while the *instr* input was manually given inputs according to each opcode. The assert statement was used to compare the python-generated output to that of the DUT, and an error was thrown in case of a mismatch. 
+Two test modules were created, one piped in predefined inputs while the other gave random test inputs. The output of the multiplier was simulated in python by creeating a list of all the inputs, and comparing the index value of each element to the select input in order to obtain the correct result. The assert statement was used to compare the python-generated output to that of the DUT, and an error was thrown in case of a mismatch. This error was investigated and the source code was thoroughly combed through to find the bug. 
