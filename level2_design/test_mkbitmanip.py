@@ -37,7 +37,7 @@ def run_test(dut):
         mav_putvalue_src1 = random.randint(0,4294967295)
         mav_putvalue_src2 = random.randint(0,4294967295)
         mav_putvalue_src3 = random.randint(0,4294967295)
-        mav_putvalue_instr = 0x41A07A33
+        mav_putvalue_instr = 0x41A07A33       #Opcode for ANDN
         print( mav_putvalue_src1)
         print( mav_putvalue_src2)
         print( mav_putvalue_src3)
