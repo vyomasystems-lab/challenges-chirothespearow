@@ -7,6 +7,7 @@ from random import randint
 @cocotb.test()
 async def test_mux(dut):
     """Test for mux2"""
+    #Manually assigning variables to each input
     i0=00
     i1=00
     i2=00
@@ -75,12 +76,13 @@ async def test_mux(dut):
     await Timer(2, units='ns')
     inps=[i0,i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21,i22,i23,i24,i25,i26,i27,i28,i29,i30]
     mux_out=False
-    for i in range(len(inps)):
+    for i in range(len(inps)):          #Traversing through list inps in order to get correct output
         if i==select:
             mux_out=inps[i]
     assert dut.out.value == mux_out, f"MUX result is incorrect: {dut.out.value} != 11"
     cocotb.log.info('##### CTB: Develop your test here ########')
 
+#Same as above but with random values
 @cocotb.test()
 async def test_mux_random(dut):
     """Test for mux2"""
